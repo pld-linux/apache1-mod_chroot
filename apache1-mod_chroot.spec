@@ -4,7 +4,7 @@ Summary:	Apache module: makes running Apache in a secure chroot environment easy
 Summary(pl):	Modu³ Apache'a do uruchamiania serwera w bezpiecznym ¶rodowisku chroot
 Name:		apache1-mod_%{mod_name}
 Version:	0.4
-Release:	0.2
+Release:	0.3
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://core.segfault.pl/~hobbit/mod_chroot/dist/mod_chroot-%{version}.tar.gz
@@ -51,7 +51,7 @@ if [ -f /var/lock/subsys/apache ]; then
 	/etc/rc.d/init.d/apache restart 1>&2
 fi
 
-%preun
+%postun
 if [ "$1" = "0" ]; then
 	if [ -f /var/lock/subsys/apache ]; then
 		/etc/rc.d/init.d/apache restart 1>&2
