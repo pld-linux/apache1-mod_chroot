@@ -1,6 +1,7 @@
 %define		mod_name	chroot
 %define 	apxs		/usr/sbin/apxs1
-Summary:	Apache module: makes running Apache in a secure chroot environment easy.
+Summary:	Apache module: makes running Apache in a secure chroot environment easy
+Summary(pl):	Modu³ Apache'a do uruchamiania serwera w bezpiecznym ¶rodowisku chroot
 Name:		apache1-mod_%{mod_name}
 Version:	0.2
 Release:	0.1
@@ -21,6 +22,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 mod_chroot makes running Apache in a secure chroot environment easy.
 You don't need to create a special directory hierarchy containing
 /dev, /lib, /etc...
+
+%description -l pl
+mod_chroot u³atwia uruchamianie Apache'a w bezpiecznym ¶rodowisku
+chroot. Nie trzeba tworzyæ specjalnej hierarchii katalogów /dev/, /lib
+itp.
 
 %prep
 %setup -q -n mod_%{mod_name}-%{version}
