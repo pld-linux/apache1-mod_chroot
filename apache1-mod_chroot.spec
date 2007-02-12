@@ -1,7 +1,7 @@
 %define		mod_name	chroot
 %define 	apxs		/usr/sbin/apxs1
 Summary:	Apache module: makes running Apache in a secure chroot environment easy
-Summary(pl.UTF-8):   Moduł Apache'a do uruchamiania serwera w bezpiecznym środowisku chroot
+Summary(pl.UTF-8):	Moduł Apache'a do uruchamiania serwera w bezpiecznym środowisku chroot
 Name:		apache1-mod_%{mod_name}
 Version:	0.5
 Release:	0.4
