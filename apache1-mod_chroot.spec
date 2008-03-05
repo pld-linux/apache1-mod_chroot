@@ -4,7 +4,7 @@ Summary:	Apache module: makes running Apache in a secure chroot environment easy
 Summary(pl.UTF-8):	Moduł Apache'a do uruchamiania serwera w bezpiecznym środowisku chroot
 Name:		apache1-mod_%{mod_name}
 Version:	0.5
-Release:	0.4
+Release:	0.5
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://core.segfault.pl/~hobbit/mod_chroot/dist/mod_chroot-%{version}.tar.gz
@@ -12,7 +12,7 @@ Source0:	http://core.segfault.pl/~hobbit/mod_chroot/dist/mod_chroot-%{version}.t
 URL:		http://core.segfault.pl/~hobbit/mod_chroot/
 BuildRequires:	apache1-devel >= 1.3.39
 BuildRequires:	rpmbuild(macros) >= 1.268
-Requires:	apache1 >= 1.3.33-2
+Requires:	apache1(EAPI)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(%{apxs} -q LIBEXECDIR 2>/dev/null)
